@@ -1,37 +1,41 @@
-# XAI Learning Kit
+# XAI Practicals — Topic-wise folders
 
-A small importable package with tabular and image Explainable AI learning examples.
+The practical code is split into separate folders at the repository root:
 
-## Install
-```bash
-python -m pip install -e .
+```text
+xai/
+├── tabular/
+│   ├── main.py
+│   └── requirements.txt
+├── image/
+│   ├── main.py
+│   └── requirements.txt
+├── text/
+│   ├── main.py
+│   └── requirements.txt
+└── xai_practical_reference/   # topic-wise reference/source viewer package
 ```
 
-## Usage
-```python
-import xai
-from xai.tabular.regression import linear, multiple, polynomial
-from xai.tabular.classification import iris
+## Install and run
 
-help(xai)
-help(linear)
-help(linear.run)
+Run commands from the repository root. Create/activate your virtual environment first.
 
-linear.run()
-# multiple.run()
-# polynomial.run(degree=3)
-# iris.run()
+**Tabular**
+```powershell
+python -m pip install -r tabular/requirements.txt
+python tabular/main.py
 ```
 
-## Explainability modules
-```python
-from xai.tabular.explainers import lime, shap, ale, ice, pdp, tree_interpreter
-from xai.image import integrated_gradients
+**Image**
+```powershell
+python -m pip install -r image/requirements.txt
+python image/main.py
 ```
 
-Install optional dependencies as needed:
-```bash
-python -m pip install lime shap captum treeinterpreter
+**Text**
+```powershell
+python -m pip install -r text/requirements.txt
+python text/main.py
 ```
 
-Some explainability modules are starter/reference entry points; use the original notebooks for complete implementations.
+The image script uses the sample path `/content/cat.jpg`; change it to a valid image path on your computer. Tabular and text practicals may download data or a pretrained model on first run. Install only the dependencies for the topic you need.
