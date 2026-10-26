@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xai-learning-kit"
+version = "0.1.0"
+description = "Small learning examples for tabular and image Explainable AI"
+requires-python = ">=3.9"
+dependencies = ["numpy", "scikit-learn", "matplotlib", "pandas"]
+
+[tool.setuptools.packages.find]
+include = ["xai*"]
